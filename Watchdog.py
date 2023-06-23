@@ -171,28 +171,6 @@ def enable_usb_ports():
     except Exception as e:
         print(f"Error al habilitar los puertos USB: {str(e)}")
 
-def show_confirmation_window(device_name):
-    result = messagebox.askyesno("Confirmación", f"¿Desea permitir la conexión del dispositivo USB '{device_name}'?")
-
-    if result:
-        messagebox.showinfo("Conexión permitida", f"Se ha permitido la conexión del dispositivo USB '{device_name}'.")
-    else:
-        messagebox.showwarning("Conexión denegada", f"Se ha denegado la conexión del dispositivo USB '{device_name}'.")
-
-
-def watch_usb_devices():
-    usb_devices_before = check_usb_devices()
-
-    while True:
-        usb_devices_after = check_usb_devices()
-
-        if len(usb_devices_after) > len(usb_devices_before):
-            new_device = list(set(usb_devices_after) - set(usb_devices_before))
-            device_name = new_device[0].split("\n")[0].split(": ")[1]
-            threading.Thread(target=show_confirmation_window, args=(device_name,)).start()
-
-        usb_devices_before = usb_devices_after
-
 def generate_memory_chart():
     memory_percent = psutil.virtual_memory().percent
 
@@ -334,8 +312,6 @@ generate_memory_chart()
 # Bloquear los puertos USB al iniciar el programa
 disable_usb_ports()
 
-# Iniciar el hilo de monitoreo de dispositivos USB
-threading.Thread(target=watch_usb_devices).start()
 
 # Iniciar el bucle principal de la ventana
 ventana.mainloop()

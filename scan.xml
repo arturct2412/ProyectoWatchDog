@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nmaprun>
 <?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 7.94 scan initiated Sat Jun 17 10:19:54 2023 as: nmap -p 1-1000 -sV -oX scan.xml 192.168.163.2 -->
-<nmaprun scanner="nmap" args="nmap -p 1-1000 -sV -oX scan.xml 192.168.163.2" start="1687011594" startstr="Sat Jun 17 10:19:54 2023" version="7.94" xmloutputversion="1.05">
+<!-- Nmap 7.94 scan initiated Wed Jun 21 19:08:15 2023 as: nmap -p 1-1000 -sV -oX scan.xml 192.168.163.2 -->
+<nmaprun scanner="nmap" args="nmap -p 1-1000 -sV -oX scan.xml 192.168.163.2" start="1687388895" startstr="Wed Jun 21 19:08:15 2023" version="7.94" xmloutputversion="1.05">
 <scaninfo type="syn" protocol="tcp" numservices="1000" services="1-1000"/>
 <verbose level="0"/>
 <debugging level="0"/>
-<host starttime="1687011595" endtime="1687011602"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<host starttime="1687388896" endtime="1687388904"><status state="up" reason="localhost-response" reason_ttl="0"/>
 <address addr="192.168.163.2" addrtype="ipv4"/>
 <hostnames>
 </hostnames>
@@ -18,8 +18,8 @@
 <port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
 <port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="microsoft-ds" method="table" conf="3"/></port>
 </ports>
-<times srtt="1956" rttvar="1299" to="100000"/>
+<times srtt="1889" rttvar="1206" to="100000"/>
 </host>
-<runstats><finished time="1687011602" timestr="Sat Jun 17 10:20:02 2023" summary="Nmap done at Sat Jun 17 10:20:02 2023; 1 IP address (1 host up) scanned in 8.77 seconds" elapsed="8.77" exit="success"/><hosts up="1" down="0" total="1"/>
+<runstats><finished time="1687388904" timestr="Wed Jun 21 19:08:24 2023" summary="Nmap done at Wed Jun 21 19:08:24 2023; 1 IP address (1 host up) scanned in 8.98 seconds" elapsed="8.98" exit="success"/><hosts up="1" down="0" total="1"/>
 </runstats>
 </nmaprun>
